@@ -1,7 +1,7 @@
 #### 测试方法
 1. 运行servlet_security.sql
 2. 打包项目并改名为ROOT.war
-3. 必须: 把mysql-connector-java-5.1.7-bin.jar复制到tomcat的lib目录下
+3. 必须: 把mysql-connector-java-5.1.47-bin.jar复制到tomcat的lib目录下
 4. 打开tomcat的server.xml，并添加以下内容
 ```
 <Realm className="org.apache.catalina.realm.JDBCRealm"
