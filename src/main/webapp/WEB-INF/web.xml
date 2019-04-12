@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
 
   <login-config>
-    <auth-method>BASIC</auth-method>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/login.jsp</form-login-page>
+      <form-error-page>/error.jsp</form-error-page>
+    </form-login-config>
   </login-config>
 
   <security-role>
@@ -16,30 +19,17 @@
     <role-name>admin</role-name>
   </security-role>
 
-  <!--可以定义多个-->
   <security-constraint>
-    <!--可以定义多个-->
     <web-resource-collection>
-      <!--必要，由工具使用，比如IDE-->
       <web-resource-name>UpdateRecipes</web-resource-name>
-      <!-- 定义要限定的资源，可以配置多个url-pattern -->
       <url-pattern>/hello</url-pattern>
-      <!-- 定义请求方法；如果没有指定，所有方法都是受约束的；一旦指定一个方法，其它方法都不受约束 -->
-      <http-method>GET</http-method>
     </web-resource-collection>
-    <!-- 定义哪些角色可以访问限定资源 -->
     <auth-constraint>
       <role-name>admin</role-name>
       <role-name>member</role-name>
     </auth-constraint>
-  </security-constraint>
-
-  <security-constraint>
-    <web-resource-collection>
-      <web-resource-name>UpdateRecipes</web-resource-name>
-      <url-pattern>/world</url-pattern>
-    </web-resource-collection>
-    <!--所有用户都不可以访问，只有其它的servlet才可以访问受限的servlet-->
-    <auth-constraint/>
+    <user-data-constraint>
+      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
   </security-constraint>
 </web-app>
