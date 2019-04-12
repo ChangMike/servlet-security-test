@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
-
   <login-config>
-    <auth-method>FORM</auth-method>
-    <form-login-config>
-      <form-login-page>/login.jsp</form-login-page>
-      <form-error-page>/error.jsp</form-error-page>
-    </form-login-config>
+    <auth-method>BASIC</auth-method>
   </login-config>
 
   <security-role>
@@ -28,8 +23,5 @@
       <role-name>admin</role-name>
       <role-name>member</role-name>
     </auth-constraint>
-    <user-data-constraint>
-      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
-    </user-data-constraint>
   </security-constraint>
 </web-app>
