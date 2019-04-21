@@ -3,7 +3,7 @@
 2. 使用注解
 ---
 #### 注解实现
-1. 注释掉web.xml里的<security-constraint>
+1. 注释掉web.xml里的&lt;security-constraint&gt;
 2. 在Servlet上添加相应的注解
 ---
 #### 测试
