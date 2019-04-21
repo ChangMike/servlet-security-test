@@ -19,7 +19,7 @@
     <role-name>admin</role-name>
   </security-role>
 
-  <security-constraint>
+<!--  <security-constraint>
     <web-resource-collection>
       <web-resource-name>UpdateRecipes</web-resource-name>
       <url-pattern>/hello</url-pattern>
@@ -32,4 +32,7 @@
       <transport-guarantee>CONFIDENTIAL</transport-guarantee>
     </user-data-constraint>
   </security-constraint>
+-->
+
 </web-app>
+

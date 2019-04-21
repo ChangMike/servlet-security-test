@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.test.security</groupId>
-    <artifactId>servlet-security-form-test</artifactId>
+    <artifactId>servlet-security-annotation-test</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>servlet-security-form-test</name>
+    <name>servlet-security-annotation-test</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -51,7 +51,7 @@
                     <server>tomcat7</server>
                     <!--下面是为https新增的配置-->
                     <httpsPort>8080</httpsPort>
-                    <keystoreFile>C:\Users\Mike\.keystore</keystoreFile>
+                    <keystoreFile>C:\Users\Administrator\.keystore</keystoreFile>
                     <keystorePass>123456</keystorePass>
                 </configuration>
             </plugin>
